@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex">
+<title>OddFeed</title>
+<script>
+  // Vecchi link lakida.github.io/OddFeed/?id=<id> → nuovo sito oddfeed.pages.dev/a/<id>
+  var id = new URLSearchParams(location.search).get('id');
+  var safe = id && /^[A-Za-z0-9_-]+$/.test(id);
+  location.replace('https://oddfeed.pages.dev/' + (safe ? 'a/' + id : ''));
+</script>
+<noscript><meta http-equiv="refresh" content="0; url=https://oddfeed.pages.dev/"></noscript>
+</head>
+<body><p>Ti stiamo portando su <a href="https://oddfeed.pages.dev/">OddFeed</a>…</p></body>
+</html>
